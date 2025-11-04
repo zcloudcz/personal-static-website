@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="cs" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Martin ZAHÁLKA - Senior .NET Developer. Custom software development solutions for your business.">
+    <title>Martin ZAHÁLKA - Senior .NET Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles-base.css">
+    <!-- Theme stylesheet will be loaded dynamically by JavaScript -->
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="/" class="logo-link">
+                        <span class="logo-text">Martin ZAHÁLKA</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">O mně</a></li>
+                    <li><a href="#services" class="nav-link">Co nabízím</a></li>
+                    <li><a href="#projects" class="nav-link">Projekty</a></li>
+                    <li><a href="#skills" class="nav-link">Dovednosti</a></li>
+                    <li><a href="#references" class="nav-link">Reference</a></li>
+                    <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                    <li>
+                        <button class="lang-switcher" id="langSwitcher">
+                            <span class="lang-active">CS</span> / <span class="lang-inactive">EN</span>
+                        </button>
+                    </li>
+                </ul>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">.NET</span> vývojář pro vás
+                </h1>
+                <p class="hero-subtitle">
+                    Jmenuji se Martin Zahálka a jsem .NET vývojář s více než 10 lety zkušeností specializující se na .NET webové aplikace a backend systémy. Kladu důraz na čistý kód, spolehlivost a řešení šitých na míru potřebám klienta.
+                </p>
+                <div class="hero-social">
+                    <a href="https://www.linkedin.com/in/martin-zahalka" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+                        <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/zcloudcz" target="_blank" rel="noopener" class="social-link" title="GitHub">
+                        <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <button class="social-link contact-link-hero" type="button" title="Email">
+                        <svg class="social-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Napište mi</a>
+                    <a href="#projects" class="btn btn-secondary">Zobrazit projekty</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Co nabízím</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Vývoj webových aplikací na míru</h3>
+                    <p class="service-description">
+                        Navrhnu a vytvořím webovou aplikaci přesně podle vašich potřeb.
+                        Specializuji se na ASP.NET Core a C#.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Návrh a optimalizace architektury</h3>
+                    <p class="service-description">
+                        Pomohu vám navrhnout škálovatelnou a udržitelnou architekturu
+                        nebo optimalizovat tu stávající.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Integrace systémů a databází</h3>
+                    <p class="service-description">
+                        Propojím vaše systémy a zajistím bezproblémovou komunikaci s databázemi
+                        SQL, NoSQL a cloudovými službami Azure.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Projekty</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="project-title">ERP výrobní firmy</h3>
+                    <p class="project-description">
+                        Multitenantní ERP webový systém pro správu klientů, objednávek, faktur...
+                        Komplexní řešení pro řízení firemních procesů s vysokými nároky na detail procesů.
+                    </p>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <span class="stat-value">100+</span>
+                            <span class="stat-label">SQL databází</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3 class="project-title">Elektronický katalog</h3>
+                    <p class="project-description">
+                        Systém pro sběr a automatického třídění dat z firemní sítě do přehledné webové aplikace.
+                    </p>
+					<div class="project-stats">
+                        <div class="project-stat">
+                            <span class="stat-value">100+</span>
+                            <span class="stat-label">uživatelů</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3 class="project-title">FakturAI</h3>
+                    <p class="project-description">
+                        Jednoduchý fakturační systém využívající AI pro větší komfort uživatelů
+                    </p>
+					<div class="project-stats">
+                        <div class="project-stat">
+                            <span class="stat-value">AI</span>
+                            <span class="stat-label">mikroservisní aplikace</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Dovednosti</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">.NET Core</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">ASP.NET</span>
+                        <span class="skill-tag">Entity Framework</span>
+                        <span class="skill-tag">Web API</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Database</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Blazor</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="references" id="references">
+        <div class="container">
+            <h2 class="section-title">Spolupráce</h2>
+            <p class="section-subtitle"></p>
+            <div class="references-grid">
+                <div class="reference-logo">
+                    <img src="reference/growellcz_logo.jpeg" alt="Growell.cz" class="grayscale-logo">
+                </div>
+                <div class="reference-logo">
+                    <img src="reference/worklio_logo.jpeg" alt="Worklio" class="grayscale-logo">
+                </div>
+                <div class="reference-logo">
+                    <img src="reference/raiffeisenbank.jpeg" alt="Raiffeisenbank" class="grayscale-logo">
+                </div>
+                <div class="reference-logo">
+                    <img src="reference/uniqa_logo.jpeg" alt="UNIQA" class="grayscale-logo">
+                </div>
+                <div class="reference-logo">
+                    <img src="reference/partners_logo.jpeg" alt="Partners" class="grayscale-logo">
+                </div>
+                <div class="reference-logo">
+                    <img src="reference/EffiChem-logo.jpg" alt="EffiChem" class="grayscale-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/CTA Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">Pojďme spolupracovat</h2>
+                <p class="contact-description">
+                    Máte projekt nebo nápad? Rád si s vámi o něm popovídám a najdeme společně nejlepší řešení.
+                    Obvykle odpovídám do 1-2 pracovních dnů.
+                </p>
+                <div class="contact-social">
+                    <a href="https://www.linkedin.com/in/martin-zahalka" target="_blank" rel="noopener" class="contact-social-link" title="LinkedIn">
+                        <svg class="contact-social-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/martinzahalka" target="_blank" rel="noopener" class="contact-social-link" title="GitHub">
+                        <svg class="contact-social-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <button class="contact-social-link contact-link" type="button" title="Email">
+                        <svg class="contact-social-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <div class="theme-switcher-title">Barevné schéma</div>
+        <div class="theme-options">
+            <button class="theme-option" data-theme="orange" title="Orange"></button>
+            <button class="theme-option" data-theme="blue" title="Blue"></button>
+            <button class="theme-option" data-theme="green" title="Green"></button>
+            <button class="theme-option" data-theme="purple" title="Purple"></button>
+            <button class="theme-option" data-theme="red" title="Red"></button>
+            <button class="theme-option" data-theme="cyan" title="Cyan"></button>
+            <button class="theme-option" data-theme="teal" title="Teal"></button>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3 class="cookie-title">Soubory cookies</h3>
+                <p class="cookie-description">
+                    Tento web používá pouze nezbytné cookies pro správnou funkčnost.
+                    Nesbíráme žádné osobní údaje ani nepoužíváme analytické nástroje.
+                </p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-accept" id="cookieAccept">
+                    Přijmout
+                </button>
+                <button class="cookie-btn cookie-decline" id="cookieDecline">
+                    Odmítnout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
