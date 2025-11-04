@@ -355,36 +355,96 @@ function setupEmailProtection() {
     const contactText = document.querySelector('.contact-text');
     const contactBtnHero = document.querySelector('.contact-link-hero');
 
-    if (contactBtn && contactText) {
-        // Přidat event listener pro kliknutí
+    // Funkce pro zobrazení notifikace
+    function showCopyNotification(success = true) {
+        // Vytvořit notifikaci
+        const notification = document.createElement('div');
+        notification.className = 'copy-notification';
+        notification.textContent = success
+            ? (currentLang === 'cs' ? '✓ Email zkopírován do schránky' : '✓ Email copied to clipboard')
+            : (currentLang === 'cs' ? '✗ Chyba při kopírování' : '✗ Copy failed');
+
+        document.body.appendChild(notification);
+
+        // Zobrazit notifikaci
+        setTimeout(() => {
+            notification.classList.add('show');
+        }, 10);
+
+        // Skrýt a odstranit notifikaci po 3 sekundách
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 3000);
+    }
+
+    // Funkce pro zkopírování do schránky
+    function copyToClipboard(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => {
+                console.log('✅ Email zkopírován do schránky');
+                showCopyNotification(true);
+            }).catch(err => {
+                console.error('❌ Chyba při kopírování:', err);
+                showCopyNotification(false);
+            });
+        } else {
+            // Fallback pro starší prohlížeče
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                console.log('✅ Email zkopírován do schránky (fallback)');
+                showCopyNotification(true);
+            } catch (err) {
+                console.error('❌ Chyba při kopírování:', err);
+                showCopyNotification(false);
+            }
+            document.body.removeChild(textarea);
+        }
+    }
+
+    if (contactBtn) {
+        const email = e1 + '@' + e2 + '.' + e3;
+
+        // Nastavit title/tooltip s emailovou adresou
+        contactBtn.setAttribute('title', email);
+
+        // Přidat event listener pro kliknutí - zkopíruje email do schránky
         contactBtn.addEventListener('click', function(e) {
             e.preventDefault();
-
-            // Složit email až při kliku
-            const email = e1 + '@' + e2 + '.' + e3;
-
-            // Otevřít email klienta
-            window.location.href = 'mailto:' + email;
+            copyToClipboard(email);
         });
 
-        // Při najetí myší ukázat email (volitelně)
-        contactBtn.addEventListener('mouseenter', function() {
-            const email = e1 + '@' + e2 + '.' + e3;
-            contactText.textContent = email;
-        });
+        // Při najetí myší ukázat email (volitelně) - pouze pokud existuje contactText
+        if (contactText) {
+            contactBtn.addEventListener('mouseenter', function() {
+                contactText.textContent = email;
+            });
 
-        contactBtn.addEventListener('mouseleave', function() {
-            // Použít aktuální jazyk pro text
-            contactText.textContent = translations[currentLang].contactButton;
-        });
+            contactBtn.addEventListener('mouseleave', function() {
+                // Použít aktuální jazyk pro text
+                contactText.textContent = translations[currentLang].contactButton;
+            });
+        }
     }
 
     // Stejná funkcionalita pro hero sekci
     if (contactBtnHero) {
+        const email = e1 + '@' + e2 + '.' + e3;
+
+        // Nastavit title/tooltip s emailovou adresou
+        contactBtnHero.setAttribute('title', email);
+
         contactBtnHero.addEventListener('click', function(e) {
             e.preventDefault();
-            const email = e1 + '@' + e2 + '.' + e3;
-            window.location.href = 'mailto:' + email;
+            copyToClipboard(email);
         });
     }
 }

@@ -982,3 +982,39 @@ section {
         transform: translateY(0);
     }
 }
+
+/* ========================================
+   Copy Notification
+   ======================================== */
+
+.copy-notification {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-600);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.copy-notification.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .copy-notification {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        text-align: center;
+    }
+}
